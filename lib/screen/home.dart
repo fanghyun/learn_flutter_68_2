@@ -6,53 +6,16 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-    // return Row(
-      // mainAxisAlignment: MainAxisAlignment.start,
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // mainAxisAlignment: MainAxisAlignment.end,
-      //mainAxisAlignment: MainAxisAlignment.spaceAround,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children:[
-          Container(
-            color: const Color.fromARGB(255, 98, 178, 253),
-            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-            child: Text(
-              "Hello Flutter 5",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 3,
-              ),
-            ),
-          ),
-          Container(
-            color: const Color.fromARGB(255, 214, 153, 255),
-            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-            child: Text(
-              "Hello Flutter 5",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 3,
-              ),
-            ),
-          ),
-          Container(
-            color: const Color.fromARGB(255, 242, 253, 153),
-            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-            child: Text(
-              "Hello Flutter 5",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 3,
-              ),
-            ),
-          ),
+        Image.asset("assets/images/daisy-9.webp", width: 200, height: 200),
+        SizedBox(height: 20),
+        Image.network(
+          "https://i0.wp.com/www.iurban.in.th/wp-content/uploads/2024/02/daisy-9.jpg?ssl=1", 
+          width: 200, 
+          height: 200,
+        ),
       ],
     );
   }
