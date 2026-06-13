@@ -52,6 +52,7 @@ class Person {
   Jop job;
  
   // Constructor
+  //Const Person({required this.name, required this.age, required this.job});
   Person({required this.name, required this.age, required this.job});
 }
 
