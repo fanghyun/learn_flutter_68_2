@@ -5,20 +5,55 @@ class Home extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color : const Color.fromARGB(255, 15, 93, 166),
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        padding: EdgeInsets.all(50),
-        child: Text(
-          "Hello Word 4",
-          style: TextStyle(
-            fontSize: 30,
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
+    return Column(
+    // return Row(
+      // mainAxisAlignment: MainAxisAlignment.start,
+      // mainAxisAlignment: MainAxisAlignment.center,
+      // mainAxisAlignment: MainAxisAlignment.end,
+      //mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children:[
+          Container(
+            color: const Color.fromARGB(255, 98, 178, 253),
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Text(
+              "Hello Flutter 5",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+              ),
+            ),
           ),
-        ),
-      ), 
+          Container(
+            color: const Color.fromARGB(255, 214, 153, 255),
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Text(
+              "Hello Flutter 5",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+              ),
+            ),
+          ),
+          Container(
+            color: const Color.fromARGB(255, 242, 253, 153),
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+            child: Text(
+              "Hello Flutter 5",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+              ),
+            ),
+          ),
+      ],
     );
   }
 }
