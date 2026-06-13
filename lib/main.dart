@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 //import 'screen/home.dart';
 import 'package:learn_flutter_68_2/screen/home.dart';
 
+import 'package:learn_flutter_68_2/screen/item.dart';
+
 void main() {
   //runApp(const MyApp());
   // const app = MaterialApp(title: "หัวข้อ", home: Text("Hello World"));
@@ -17,7 +19,7 @@ void main() {
           backgroundColor: const Color.fromARGB(255, 15, 93, 166),
           centerTitle: true,
         ),
-        body: Home(),
+        body: Item(),
       ),
     ),
   );
