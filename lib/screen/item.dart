@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:learn_flutter_68_2/model/person.dart';
+
 class Item extends StatefulWidget {
   const Item({super.key});
 
@@ -8,12 +10,11 @@ class Item extends StatefulWidget {
 }
 
 class _ItemState extends State<Item> {
-  final List<String> data = ["สมชาย", "สมศรี", "สมปอง", "สมหมาย", "สมจิตร"];
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: data.length,
+      itemCount: people.length,
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
@@ -22,9 +23,28 @@ class _ItemState extends State<Item> {
           ),
           margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
           padding: const EdgeInsets.all(40),
-          child: Text(
-            data[index],
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "ชื่อ: ${people[index].name}",
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "อายุ: ${people[index].age}",
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                  Text(
+                    "อาชีพ: ${people[index].job}",
+                    style: const TextStyle(fontSize: 16),
+                  ),
+                ],
+              ),
+              Icon(Icons.person, size: 50, color: Colors.blue),
+            ],
           ),
         );
       },
