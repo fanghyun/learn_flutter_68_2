@@ -7,6 +7,7 @@ import 'package:learn_flutter_68_2/screen/item.dart';
 
 import 'package:learn_flutter_68_2/screen/addForm.dart';
 
+
 void main() {
   //runApp(const MyApp());
   // const app = MaterialApp(title: "หัวข้อ", home: Text("Hello World"));
@@ -25,6 +26,27 @@ void main() {
   //     ),
   //   ),
   // );
-  runApp(AddForm());
+  
+  // runApp(AddForm());
+  runApp(MyApp());
 }
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Add Person",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Add Person"),
+          backgroundColor: const Color.fromARGB(255, 15, 93, 166),
+          centerTitle: true,
+        ),
+        body: Item(),
+      ),
+    );
+  }
+}
+
 

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:learn_flutter_68_2/model/person.dart';
 
+import 'package:learn_flutter_68_2/main.dart';
+
 class AddForm extends StatefulWidget {
   const AddForm({super.key});
 
@@ -115,6 +117,11 @@ class _AddFormState extends State<AddForm> {
                       
                       //Clear the form after submission
                       _formKey.currentState!.reset();
+
+                      // Navigate back to the previous screen
+                      Navigator.push(
+                        context, 
+                        MaterialPageRoute(builder: (context) => MyApp()));
                     }
                   },
                   style: FilledButton.styleFrom(
