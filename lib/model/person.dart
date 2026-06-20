@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum Jop {
+enum Job {
   developer(
     title:"นักพัฒนา",
     description: "ทำงานเกี่ยวกับการเขียนโปรแกรมและพัฒนาแอปพลิเคชัน",
@@ -32,7 +32,7 @@ enum Jop {
     color: Colors.red,
   );
 
-  const Jop({
+  const Job({
     required this.title,
     required this.description,
     required this.image,
@@ -49,7 +49,7 @@ enum Jop {
 class Person {
   String name;
   int age;
-  Jop job;
+  Job job;
  
   // Constructor
   //Const Person({required this.name, required this.age, required this.job});
@@ -57,9 +57,9 @@ class Person {
 }
 
 List<Person> people = [
-  Person(name: "สมชาย", age: 30, job: Jop.developer),
-  Person(name: "สมศรี", age: 28, job: Jop.designer),
-  Person(name: "สมปอง", age: 35, job: Jop.manager),
-  Person(name: "สมหมาย", age: 40, job: Jop.businessman),
-  Person(name: "สมจิตร", age: 25, job: Jop.student),
+  Person(name: "สมชาย", age: 30, job: Job.developer),
+  Person(name: "สมศรี", age: 28, job: Job.designer),
+  Person(name: "สมปอง", age: 35, job: Job.manager),
+  Person(name: "สมหมาย", age: 40, job: Job.businessman),
+  Person(name: "สมจิตร", age: 25, job: Job.student),
 ];
